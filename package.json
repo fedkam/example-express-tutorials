@@ -1,5 +1,5 @@
 {
-  "name": "express-tutorials",
+  "name": "example-express-tutorials",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -7,7 +7,7 @@
     "devstart": "nodemon ./bin/www"
   },
   "dependencies": {
-    "async": "^3.1.0",
+    "async": "3.1.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
@@ -18,5 +18,7 @@
   },
   "devDependencies": {
     "nodemon": "^1.19.4"
-  }
+  },
+  "keywords": [],
+  "description": ""
 }
