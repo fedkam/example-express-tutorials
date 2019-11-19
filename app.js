@@ -11,7 +11,7 @@ var app = express();
 
 //Устанавливаем соединение с mongoose
 var mongoose = require('mongoose');
-var mongoDB = 'mongodb+srv://fedoskamcha:112fed@clustertest-gzv1l.mongodb.net/test?retryWrites=true&w=majority/test';//замените url!!!
+var mongoDB = 'mongodb+srv://fedoskamcha:112fed@clustertest-gzv1l.mongodb.net/test?retryWrites=true&w=majority/test';
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise; // Позволим Mongoose использовать глобальную библиотеку промисов
 var db = mongoose.connection; // Получение подключения по умолчанию
