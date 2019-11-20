@@ -31,9 +31,11 @@ exports.index = function(req, res) {
 exports.book_list = function(req, res, next) {
   Book.find({}, 'title author')
     .populate('author')
+    .populate('genre')
     .exec(function (err, list_books) {
       if (err) { return next(err); }
       //Successful, so render
+      console.log('list_books = ', list_books[0].genre)
       res.render('book_list', { title: 'Book List', book_list: list_books });
     });
 };

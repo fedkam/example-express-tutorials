@@ -6,7 +6,13 @@ var book_controller = require('../controllers/bookController');
 var author_controller = require('../controllers/authorController');
 var genre_controller = require('../controllers/genreController');
 var book_instance_controller = require('../controllers/bookinstanceController');
+//var lvl1 = require('../controllers/lvl1');
+var lvl2 = require('../controllers/lvl2Controller');
+var lvl3 = require('../controllers/lvl3Controller');
 
+// router.get('/lvl1', lvl1.list_lvl1);
+router.get('/lvl2', lvl2.list_lvl2);
+router.get('/lvl3', lvl3.list_lvl3);
 
 /// BOOK ROUTES МАРШРУТЫ КНИГ///
 

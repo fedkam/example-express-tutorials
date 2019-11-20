@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+
+  ul
+  each lvl2 in lvl2_list
+    li
+      a(href=lvl2.url) #{lvl2.name}
+        ul
+          li
+            p #{lvl2.items}
+
+  else
+    li There are no books.
