@@ -1,5 +1,4 @@
-var Lvl2 = require('../models/lvl2');
-
+var Lvl1 = require('../models/lvl1');
 var async = require('async');
 
 // exports.list_lvl2 = function(req, res) {
@@ -12,12 +11,14 @@ var async = require('async');
 //       res.render('lvl2-view', { title: 'Test List', lvl2_list: list_lvl2 });
 //     });
 
-    exports.list_lvl2 = function(req, res, next) {
-      Lvl2.find({}, 'name')
-        .populate('items')
-        .exec(function (err, list_lvl2) {
+    exports.list_lvl1 = function(req, res, next) {
+      Lvl1.find({}, 'name')
+        .populate({
+          path:'items',
+          populate: {path:'items'}})
+        .exec(function (err, list_lvl1) {
           if (err) { return next(err); }
-          res.render('lvl2-view', { title: 'Book List', lvl2_list: list_lvl2 });
+          res.render('lvl1-view', { title: 'Book List', lvl1_list: list_lvl1 });
         });
 
 };
